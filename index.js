@@ -34,6 +34,13 @@ export function ifIphoneX(iphoneXStyle, regularStyle) {
     return regularStyle;
 }
 
+export function ifHasIsland(islandStyle, regularStyle) {
+    if (hasIsland()) {
+        return islandStyle;
+    }
+    return regularStyle;
+}
+
 export function getStatusBarHeight(safe) {
     function safeHeight(hasIsland) {
         // FIXME: There are more height values depending on the model (iPhone 12/13 -> 47, 13 mini -> 50, ..)
